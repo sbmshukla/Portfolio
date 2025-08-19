@@ -1,37 +1,89 @@
 import streamlit as st
 
+# --- PAGE CONFIG ---
+st.set_page_config(page_title="Shubham Shukla | ML Engineer", page_icon="🤖", layout="wide")
+
 # --- HEADER ---
-st.set_page_config(page_title="My Portfolio", page_icon=":wave:", layout="wide")
-st.title("👋 Hi, I'm [Your Name]")
+st.title("🤖 Shubham Shukla")
 st.subheader("Machine Learning Engineer | Data Scientist | AI Enthusiast")
-st.write("Welcome to my portfolio! 🚀 Here you’ll find my projects, skills, and experience.")
+st.write("🚀 I build and deploy data-driven solutions that turn raw data into intelligent applications.")
 
 # --- ABOUT ME ---
-st.header("About Me")
+st.header("👨‍💻 About Me")
 st.write("""
-I am a Machine Learning Engineer passionate about building AI-powered applications.
-My expertise includes Python, ML, DL, and data analytics.
+I am a **Machine Learning Engineer** passionate about designing, training, and deploying AI-powered applications.  
+With expertise in **end-to-end ML pipelines**, I specialize in:
+- Data preprocessing & feature engineering  
+- Supervised & unsupervised ML models  
+- Deep learning architectures (CNNs, RNNs, Transformers)  
+- Model deployment with Streamlit, Flask, FastAPI, and cloud platforms  
 """)
 
 # --- SKILLS ---
-st.header("Skills")
-st.write("""
-- 🐍 Python, Pandas, NumPy  
-- 🤖 Machine Learning (Scikit-learn, TensorFlow, PyTorch)  
-- 📊 Data Visualization (Matplotlib, Seaborn, Plotly)  
-- 🌐 Streamlit, Flask, FastAPI  
-""")
+st.header("🛠️ Core Skills")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("✅ **Programming**: Python, SQL, C++")
+    st.markdown("✅ **Libraries**: NumPy, Pandas, Scikit-learn")
+with col2:
+    st.markdown("✅ **Deep Learning**: TensorFlow, PyTorch")
+    st.markdown("✅ **NLP**: Transformers, HuggingFace, spaCy")
+with col3:
+    st.markdown("✅ **Deployment**: Streamlit, Flask, FastAPI, Docker")
+    st.markdown("✅ **Visualization**: Matplotlib, Seaborn, Plotly")
 
 # --- PROJECTS ---
-st.header("Projects")
-st.markdown("### 📌 [Sentiment Analysis App](https://github.com/sbmshukla/sentiment-analysis-app)")
-st.write("Built a machine learning model to analyze sentiment in text and deployed it on Streamlit.")
+st.header("📂 Featured Projects")
+tab1, tab2, tab3, tab4 = st.tabs([
+    "📌 Sentiment Analysis",
+    "📌 Image Classifier",
+    "📌 Recommendation System",
+    "📄 Resume"
+])
 
-st.markdown("### 📌 [Image Classifier](https://github.com/yourusername/image-classifier)")
-st.write("Deep learning-based image classifier using TensorFlow and CNNs.")
+with tab1:
+    st.subheader("📌 Sentiment Analysis App")
+    st.write("""
+    - Built an ML model to classify text sentiment (positive/negative/neutral).  
+    - Deployed as a **Streamlit web app**.  
+    """)
+    st.markdown("[🔗 View Project](https://github.com/sbmshukla/sentiment-analysis-app)")
+
+with tab2:
+    st.subheader("📌 Image Classifier")
+    st.write("""
+    - Deep Learning-based **CNN classifier** trained on image datasets.  
+    - Achieved **90%+ accuracy** on test data.  
+    """)
+    st.markdown("[🔗 View Project](https://github.com/yourusername/image-classifier)")
+
+with tab3:
+    st.subheader("📌 Movie Recommendation System")
+    st.write("""
+    - Implemented a **content-based + collaborative filtering** recommender.  
+    - Built with **scikit-learn, cosine similarity, and matrix factorization**.  
+    """)
+    st.markdown("[🔗 View Project](https://github.com/yourusername/recommender-system)")
+
+with tab4:
+    st.subheader("📄 Download My Resume")
+    with open("resume.pdf", "rb") as pdf_file:
+        st.download_button(
+            label="⬇️ Download Resume",
+            data=pdf_file,
+            file_name="Shubham_Shukla_Resume.pdf",
+            mime="application/pdf"
+        )
 
 # --- CONTACT ---
-st.header("Contact Me")
-st.write("📧 Email: sbmshukla@gmail.com")
-st.write("🌐 LinkedIn: [Your Profile](https://linkedin.com/in/sbmhukla)")
-st.write("💻 GitHub: [Your Repos](https://github.com/sbmshukla)")
+st.header("📬 Contact Me")
+st.write("Let's connect! 🚀")
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown("📧 **Email:** [sbmshukla@gmail.com](mailto:sbmshukla@gmail.com)")
+with col2:
+    st.markdown("🌐 **LinkedIn:** [linkedin.com/in/sbmhukla](https://linkedin.com/in/sbmhukla)")
+with col3:
+    st.markdown("💻 **GitHub:** [github.com/sbmshukla](https://github.com/sbmshukla)")
