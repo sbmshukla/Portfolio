@@ -1,7 +1,7 @@
 import streamlit as st
 
 # --- PAGE CONFIG ---
-st.set_page_config(page_title="Shubham Shukla | ML Engineer", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="sbmshukla | ML Engineer", page_icon="🤖", layout="wide")
 
 # --- HEADER ---
 st.title("🤖 Shubham Shukla")
@@ -48,7 +48,8 @@ with tab1:
     - Built an ML model to classify text sentiment (positive/negative/neutral).  
     - Deployed as a **Streamlit web app**.  
     """)
-    st.markdown("[🔗 View Project](https://github.com/sbmshukla/sentiment-analysis-app)")
+    st.markdown("[🔗 View On GitHub](https://github.com/sbmshukla/SentimentAnalysis)")
+    st.markdown("[🔗 View Live Model](https://sentimatic.streamlit.app/)")
 
 with tab2:
     st.subheader("📌 Image Classifier")
